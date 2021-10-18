@@ -1,0 +1,16 @@
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: none;
+}
+
+.fadeIn {
+  opacity: 1;
+  width: 100 px;
+  height: 100 px;
+  transition: width 0.5 s,
+  height 0.5 s,
+  opacity 0.5 s 0.5 s;
+
+}
