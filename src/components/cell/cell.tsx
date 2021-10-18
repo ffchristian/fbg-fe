@@ -61,5 +61,5 @@ export default class Cell extends Component<CellState> {
         onClick={ this.onClick }>
       </div>
     );
-  };
-};
+  }
+}
