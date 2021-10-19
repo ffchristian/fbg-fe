@@ -32,7 +32,6 @@ class App extends Component {
   }
   async triggerBoardRender(data: any, area: number) {
     this.setState({ data:  [] });
-    console.log(area);
     this.setState({ data, area});
   }
   async setBoardName(name: any) {

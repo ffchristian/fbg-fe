@@ -9,6 +9,7 @@ type GridType = {
   service: Service,
   triggerBoardRender: (data: any, area: number) => Promise<void>
 };
+
 export default class Grid extends Component<GridType> {
   public state: any;
   public rows: any;

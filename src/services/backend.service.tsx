@@ -35,9 +35,9 @@ export default class Service {
         },
         body: JSON.stringify({ coordinates, value: this.data[coordinates.x][coordinates.y] })
       });
-    this.cleanToUpdate();
-    const {lRectCoodinates, area} = await data.json();
+    const {lRectCoodinates, area, matrixData} = await data.json();
     this.area = area;
+    this.data = matrixData;
     this.lRectCoodinates = lRectCoodinates;
     this.drawRectangle();
     return this.data;
@@ -66,12 +66,6 @@ export default class Service {
   }
   getArea() {
     return this.area;
-  }
-  cleanToUpdate() {
-    for (const {x, y} of this.lRectCoodinates) {
-      if (this.data[x][y] === 2) { this.data[x][y] = 0; }
-    }
-    return this.data;
   }
   drawRectangle() {
     for (const {x, y} of this.lRectCoodinates) {
