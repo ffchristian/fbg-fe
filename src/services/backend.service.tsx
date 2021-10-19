@@ -26,7 +26,7 @@ export default class Service {
   }
   async updateByBoardData(boardName: string, coordinates: {x: number, y: number}, value: boolean) {
     try {
-      this.data[coordinates.x][coordinates.y] = this.data[coordinates.x][coordinates.y] === 2 ? true : value;
+      this.data[coordinates.x][coordinates.y] = this.data[coordinates.x][coordinates.y] === 2 ? false : value;
       const endpoint = '/board/';
       const data = await fetch(`${this.apiUrl}${endpoint}${boardName}`, {
         method: 'PUT',
